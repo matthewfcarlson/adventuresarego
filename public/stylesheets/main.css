@@ -1,27 +1,74 @@
 .jumbotron {
-  background: #532F8C;
+  background: #0555B2;
   color: white;
-  padding-bottom: 80px; }
-  .jumbotron .btn-primary {
-    background: #845ac7;
-    border-color: #845ac7; }
-    .jumbotron .btn-primary:hover {
-      background: #7646c1; }
-  .jumbotron p {
-    color: #d9ccee;
-    max-width: 75%;
-    margin: 1em auto 2em; }
-  .navbar + .jumbotron {
-    margin-top: -20px; }
-  .jumbotron .lang-logo {
-    display: block;
-    background: #B01302;
-    border-radius: 50%;
-    overflow: hidden;
-    width: 100px;
-    height: 100px;
-    margin: auto;
-    border: 2px solid white; }
-    .jumbotron .lang-logo img {
-      max-width: 100%; }
+  padding-bottom: 80px;
+  border-radius: 0;
+}
 
+.jumbotron .btn-primary {
+  background: #845ac7;
+  border-color: #845ac7;
+}
+
+.jumbotron .btn-primary:hover {
+  background: #7646c1;
+}
+
+.jumbotron p {
+  color: #d9ccee;
+  max-width: 75%;
+  margin: 1em auto 2em;
+}
+
+.jumbotron.footer {
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+  margin-bottom: 0;
+}
+
+.navbar+.jumbotron {
+  margin-top: -20px;
+}
+
+.jumbotron .lang-logo {
+  display: block;
+  background: #B01302;
+  border-radius: 50%;
+  overflow: hidden;
+  width: 100px;
+  height: 100px;
+  margin: auto;
+  border: 2px solid white;
+}
+
+.jumbotron .lang-logo img {
+  max-width: 100%;
+}
+
+.header.scrolling{
+  width:100%;
+  height:75vh;
+  background:#3390FF;
+  overflow-y:hidden;
+  position:relative;
+}
+
+.parallax_layer{
+  position: absolute;
+  top:0;
+  left:0;
+  right:0;
+  bottom:0;
+}
+.parallax_layer-front {
+  -webkit-transform: translateZ(0) translateY(10vh);
+  transform: translatez(0) translateY(30vh);
+}
+.parallax_layer-middle {
+  -webkit-transform: translateZ(-1px);
+  transform: translateZ(-1px) translateY(20vh);
+}
+.parallax_layer-back {
+  -webkit-transform: translateZ(-2px);
+  transform: translateZ(-2px) translateY(10vh);
+}
