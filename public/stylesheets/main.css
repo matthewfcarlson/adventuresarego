@@ -4,6 +4,10 @@
   padding-bottom: 80px;
   border-radius: 0;
 }
+html,body {
+  margin:0;
+  padding:0;
+}
 
 .jumbotron .btn-primary {
   background: #845ac7;
