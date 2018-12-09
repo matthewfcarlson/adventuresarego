@@ -21,23 +21,26 @@
             var windowHeight = Math.round(window.innerHeight * .75);
             nav.children(".parallax_layer").each(function (index, element) {
                 var startOffset = $(element).attr("nav-start") /100.0 * windowHeight;
-                console.log(index, element, startOffset);
+                //console.log(index, element, startOffset);
                 $(element).css({ transform: 'translateY(' + startOffset + 'px)' });
             });
 
-            console.log(nav);
             var maxHeight = nav.height();
             $(window).scroll(function () {
                 var scrollTop = $(window).scrollTop();
-                var windowHeight = Math.round(window.innerHeight * .75);
+                var windowHeight = Math.round(window.innerHeight * .75);                
                 var remainingHeight = windowHeight - scrollTop;
+                var minHeight = Math.round(window.innerHeight * .25);
+                var maxScroll = Math.round(window.innerHeight * .30);
                 if (remainingHeight < 1) return;
-                console.log("Scaling to " + remainingHeight + " pixels");
+                if (remainingHeight < minHeight) remainingHeight = minHeight;
+                //console.log("Scaling to " + remainingHeight + " pixels at "+scrollTop);
                 nav.children(".parallax_layer").each(function (index, element) {
                     var startOffset = $(element).attr("nav-start") /100.0 * remainingHeight;
-                    var offset = startOffset + scrollTop;
-                    console.log(index,offset);
+                    var topScroll = maxScroll > scrollTop? scrollTop : maxScroll
+                    var offset = startOffset + topScroll;
 
+                    //console.log(index,offset, startOffset);
                     $(element).css({ transform: 'translateY(' + offset + 'px)' });
                 });
             });
